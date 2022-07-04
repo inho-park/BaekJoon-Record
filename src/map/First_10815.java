@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
 
-public class _10815 {
+public class First_10815 {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
