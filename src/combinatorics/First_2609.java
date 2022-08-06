@@ -14,31 +14,31 @@ public class First_2609 {
 		int a = Integer.parseInt(st.nextToken());
 		int b = Integer.parseInt(st.nextToken());
 		int A = a, B = b;
-		int gcf,lcm; //greatest common factor, least common multiple
+		int gcd,lcm; //greatest common factor, least common multiple
 		if(a>b) {
 			while(true) {
-				gcf = a%b;
-				if (gcf==0) {
-					gcf = b;
+				gcd = a%b;
+				if (gcd==0) {
+					gcd = b;
 					break;
 				}
 				a = b;
-				b = gcf;
+				b = gcd;
 			}
 		}
 		else {
 			while(true) {
-				gcf = b%a;
-				if (gcf==0) {
-					gcf = a;
+				gcd = b%a;
+				if (gcd==0) {
+					gcd = a;
 					break;
 				}
 				b = a;
-				a = gcf;
+				a = gcd;
 			}
 		}
-		lcm = A*B/gcf;
-		System.out.println(gcf);
+		lcm = A*B/gcd;
+		System.out.println(gcd);
 		System.out.print(lcm);
 	}
 }
