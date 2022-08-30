@@ -27,9 +27,8 @@ public class First_9375 {
 				else map.put(wearing, 1);
 			}
 			ans = 1;
-			for (Map.Entry<String,Integer> entry : map.entrySet()) {
-				ans = ans*(entry.getValue()+1);
-			}
+			for (Map.Entry<String,Integer> entry : map.entrySet()) ans = ans*(entry.getValue()+1);
+			
 			sb.append(ans-1).append("\n");				
 		}
 		System.out.print(sb);
