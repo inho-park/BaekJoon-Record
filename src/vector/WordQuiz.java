@@ -9,7 +9,6 @@ import java.util.Vector;
 public class WordQuiz {
 
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
 		// ¡ÿ∫Òπ∞
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb;

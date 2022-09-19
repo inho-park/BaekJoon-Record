@@ -6,10 +6,12 @@ import java.util.Vector;
 public class VectorEx1 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// 준비물
 		Scanner sc = new Scanner(System.in);
+		// 벡터 생ㅋ성ㅋ
 		Vector<Integer> vt = new Vector<>();
 		int n;
+		
 		while (true) {
 			n = sc.nextInt();
 			if (n==-1) {
@@ -19,5 +21,6 @@ public class VectorEx1 {
 			}
 			vt.add(n);
 		}
+		sc.close();
 	}
 }
