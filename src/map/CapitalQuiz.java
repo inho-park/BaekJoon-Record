@@ -39,7 +39,7 @@ public class CapitalQuiz {
 		v.add("호주");
 		v.add("노르웨이");
 		
-		 
+		
 		String country, input, ans;
 		Random rd = new Random();
 		System.out.println("게임 시작");
