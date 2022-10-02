@@ -1,4 +1,4 @@
-package combinatorics;
+package dynamic_programming;
 
 public class Dynamic_ProgrammingEx {
 	// why we have to use DP?
