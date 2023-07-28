@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class first_2907 {
+public class first_2903 {
 	// 입력
 	//	첫째 줄에 N이 주어진다. (1 ≤ N ≤ 15)
 		
