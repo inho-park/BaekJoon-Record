@@ -18,7 +18,7 @@ public class first_2745 {
 				// - 48
 				result += ((int)n[i] - 48) * round;
 			} else {
-				// - 54
+				// - 55
 				result += ((int)n[i] - 55) * round;
 			}
 			cnt++;
