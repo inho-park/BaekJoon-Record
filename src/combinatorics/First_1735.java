@@ -1,11 +1,11 @@
-package math;
+package combinatorics;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class first_1735 {
+public class First_1735 {
 
 	// 입력
 	//	첫째 줄에 N이 주어진다. (1 ≤ N ≤ 15)
