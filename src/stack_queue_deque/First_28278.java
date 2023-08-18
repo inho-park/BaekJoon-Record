@@ -1,4 +1,4 @@
-package _baekjoon;
+package stack_queue_deque;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-public class Main {
+public class First_28278 {
 	// 입력
 	//	첫째 줄에 명령의 수 N이 주어진다. (1 ≤ N ≤ 1,000,000)
 	//	둘째 줄부터 N개 줄에 명령이 하나씩 주어진다.
