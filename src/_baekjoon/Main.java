@@ -4,51 +4,52 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Main {	
 	// 입력
-	//	첫째 줄에 명령의 수 N이 주어진다. (1 ≤ N ≤ 1,000,000)
-	//	둘째 줄부터 N개 줄에 명령이 하나씩 주어진다.
-	//	출력을 요구하는 명령은 하나 이상 주어진다.
+	//  입력의 첫째 줄에는 현재 승환이의 앞에 서 있는 학생들의 수 N(1 ≤ N ≤ 1,000,자연수)이 주어진다.
+	//	다음 줄에는 승환이 앞에 서있는 모든 학생들의 번호표(1,2,...,N) 순서가 앞에서부터 뒤 순서로 주어진다.
 	// 출력
-	//	출력을 요구하는 명령이 주어질 때마다 명령의 결과를 한 줄에 하나씩 출력한다.
+	//	승환이가 무사히 간식을 받을 수 있으면 "Nice"(따옴표는 제외)를 출력하고 그렇지 않다면 "Sad"(따옴표는 제외)를 출력한다.
 	
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int n = Integer.parseInt(br.readLine());
-		ArrayList<Integer> stack = new ArrayList<>();
-		StringBuilder sb = new StringBuilder();
-		for (int i = 0; i < n; i++) {
-			StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-			switch(Integer.parseInt(st.nextToken())) {
-				case 1:
-					int value = Integer.parseInt(st.nextToken());
-					stack.add(value);
-					break;
-				case 2:
-					if (stack.isEmpty()) {
-						sb.append(-1 + "\n");
-						break;
-					}else {
-						int tos = stack.size()-1;
-						sb.append(stack.get(tos) + "\n");
-						stack.remove(tos);
-					}
-					break;
-				case 3:
-					sb.append(stack.size() + "\n");
-					break;
-				case 4:
-					if (stack.isEmpty()) sb.append(1 + "\n");
-					else sb.append(0 + "\n");
-					break;
-				case 5:
-					if (stack.isEmpty()) sb.append(-1 + "\n");
-					else sb.append(stack.get(stack.size()-1) + "\n");
-					break;
+		
+		Queue<Integer> q = new LinkedList<>();	
+		Stack<Integer> s = new Stack<>();	
+		
+		StringTokenizer st = new StringTokenizer(br.readLine()," ");
+		for(int i = 0; i < n; i++) {
+			q.offer(Integer.parseInt(st.nextToken()));
+		}
+		
+		int start = 1;
+		
+		while(!q.isEmpty()) {
+			if(q.peek() == start) {
+				q.poll();
+				start++;
+			}else if(!s.isEmpty() && s.peek() == start) {
+				s.pop();
+				start++;
+			}else {	
+				s.push(q.poll());
 			}
 		}
-		System.out.print(sb);
+		while(!s.isEmpty()) {
+			if(s.peek() == start) {
+				s.pop();
+				start++;
+			}else {
+				System.out.println("Sad");
+				break;
+			}
+		}
+		System.out.println("Nice");
 	}
 }
