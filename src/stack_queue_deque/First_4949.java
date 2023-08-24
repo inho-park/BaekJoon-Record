@@ -1,15 +1,11 @@
-package _baekjoon;
+package stack_queue_deque;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Stack;
-import java.util.StringTokenizer;
 
-public class Main {	
+public class First_4949 {
 	// 입력
 	//  각 문자열은 마지막 글자를 제외하고 영문 알파벳, 공백, 소괄호("( )"), 대괄호("[ ]")로 이루어져 있으며, 온점(".")으로 끝나고, 길이는 100글자보다 작거나 같다.
 	//	입력의 종료조건으로 맨 마지막에 온점 하나(".")가 들어온다.
