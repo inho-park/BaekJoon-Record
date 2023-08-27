@@ -1,4 +1,4 @@
-package _baekjoon;
+package stack_queue_deque;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Main {	
+public class First_2164 {
 	// 입력
 	//  첫째 줄에 정수 N(1 ≤ N ≤ 500,000)이 주어진다.
 	// 출력
