@@ -8,8 +8,7 @@ public class Second_10216 {
 	//
 	static int[][] ¹è¿­;
     static boolean[] visited;
-    public static void main(String[] args) throws NumberFormatException, IOException {
-        // TODO Auto-generated method stub
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
         for(int t=0; t<n; t++) {
