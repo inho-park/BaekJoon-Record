@@ -1,11 +1,11 @@
-package _baekjoon;
+package dynamic_programming;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
+public class First_1149 {
 	// 입력
 	//  첫째 줄에 집의 수 N(2 ≤ N ≤ 1,000)이 주어진다. 
 	//  둘째 줄부터 N개의 줄에는 각 집을 빨강, 초록, 파랑으로 칠하는 비용이 1번 집부터 한 줄에 하나씩 주어진다. 
