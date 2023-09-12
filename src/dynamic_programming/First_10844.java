@@ -1,10 +1,10 @@
-package _baekjoon;
+package dynamic_programming;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main {
+public class First_10844 {
 	// 입력
 	//  첫째 줄에 1보다 크거나 같고, 100보다 작거나 같은 정수 N이 주어진다.
 	// 출력
