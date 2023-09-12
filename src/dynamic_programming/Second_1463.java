@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 public class Second_1463 {
 	// 입력
-	//  첫째 줄에 1보다 크거나 같고, 106보다 작거나 같은 정수 N이 주어진다.
+	//  첫째 줄에 1보다 크거나 같고, 1000000보다 작거나 같은 정수 N이 주어진다.
 	// 출력
 	//	첫째 줄에 연산을 하는 횟수의 최솟값을 출력한다.
 	static int dp[];
