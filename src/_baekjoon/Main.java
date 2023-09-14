@@ -6,25 +6,29 @@ import java.io.InputStreamReader;
 
 public class Main {
 	// 입력
-	//  첫째 줄에 1보다 크거나 같고, 100보다 작거나 같은 정수 N이 주어진다.
+	//  첫째 줄에 포도주 잔의 개수 n이 주어진다. (1 ≤ n ≤ 10,000) 
+	//  둘째 줄부터 n+1번째 줄까지 포도주 잔에 들어있는 포도주의 양이 순서대로 주어진다. 포도주의 양은 1,000 이하의 음이 아닌 정수이다.
 	// 출력
-	//	첫째 줄에 정답을 1,000,000,000으로 나눈 나머지를 출력한다.
-	static int dp[][];
+	//	첫째 줄에 최대로 마실 수 있는 포도주의 양을 출력한다.
+	static int[] dp, arr;
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int n = Integer.parseInt(br.readLine()), div = 1000000000;
-		long result = 0;
-		dp = new int [n + 1][10];
-		for (int i = 1; i < 10; i++) dp[1][i] = 1;
+		int n = Integer.parseInt(br.readLine());
+		dp = new int[n + 1];
+		arr = new int[n + 1];
+		for(int i = 1; i < n + 1; i++) arr[i] = Integer.parseInt(br.readLine());
+		dp[1] = arr[1];
+		if (n > 1) dp[2] = arr[1] + arr[2]; 
+
+		System.out.println(solve(n));
+	}
+	
+	static int solve(int n) {
 		
-		for (int i = 2; i <= n; i++)
-			for (int j = 0; j < 10; j++) {
-				if (j == 0) dp[i][j] = dp[i - 1][j + 1] % div;
-				else if (j == 9) dp[i][j] = dp[i - 1][j - 1] % div;
-				else dp[i][j] = (dp[i - 1][j - 1] + dp[i - 1][j + 1]) % div;
-			}
+		if(n > 2) {
+			dp[n] = Math.max(Math.max(solve(n - 2), solve(n - 3) + arr[n - 1]) + arr[n], solve(n - 1));
+		}
 		
-		for (int i = 0; i < 10; i++) result += dp[n][i];
-		System.out.print(result % div);
+		return dp[n];
 	}
 }
