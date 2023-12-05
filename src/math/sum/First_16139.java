@@ -1,11 +1,11 @@
-package _baekjoon;
+package math.sum;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
+public class First_16139 {
 	// 입력
 	// 첫 줄에 문자열 S가 주어진다. 
 	//	문자열의 길이는 200,000자 이하이며 알파벳 소문자로만 구성되었다. 
