@@ -1,11 +1,11 @@
-package _baekjoon;
+package math.sum;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
+public class First_11660 {
 	// 입력
 	//	첫째 줄에 표의 크기 N과 합을 구해야 하는 횟수 M이 주어진다. 
 	//	(1 ≤ N ≤ 1024, 1 ≤ M ≤ 100,000) 둘째 줄부터 N개의 줄에는 표에 채워져 있는 수가 1행부터 차례대로 주어진다. 
