@@ -5,11 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Firsst_10986 {
-	// 틀린 이유
-	//	1. 메모리 초과 -> boolean 2차원 배열을 만들 이유가 전혀 없음
-	//	2. result, nums 등 overflow 를 대비해 int 가 아닌 long 으로 배열 생성할 필요가 있음
-	//  3. 
+public class Second_10986 {
 	// 입력
 	//	첫째 줄에 N과 M이 주어진다. (1 ≤ N ≤ 106, 2 ≤ M ≤ 103)
 	//	둘째 줄에 N개의 수 A1, A2, ..., AN이 주어진다. (0 ≤ Ai ≤ 109)
@@ -18,19 +14,17 @@ public class Firsst_10986 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	    StringTokenizer st = new StringTokenizer(br.readLine());
-	    int n = Integer.parseInt(st.nextToken()), m = Integer.parseInt(st.nextToken()),result = 0;
-	    boolean dp[][] = new boolean [n+1][n+1];
-	    int nums[] = new int [n + 1];
+	    int n = Integer.parseInt(st.nextToken()), m = Integer.parseInt(st.nextToken()); 
+	    long nums[] = new long [n + 1], result = 0, mods[] = new long [m];
 	    st = new StringTokenizer(br.readLine(), " ");
-	    for (int i = 1; i <= n; i++) nums[i] = nums[i - 1] + Integer.parseInt(st.nextToken());
 	    for (int i = 1; i <= n; i++) {
-	    	for (int j = 0; j < i; j++) {
-	    		if ((nums[i] - nums[j])%m == 0) dp[i][j + 1] = true;
-	    	}
+	    	nums[i] = (nums[i - 1] + Integer.parseInt(st.nextToken())) % m;
+	    	if (nums[i] == 0) result++;
+	    	mods[(int)nums[i]]++;
 	    }
-	    for (boolean []arr: dp)
-	    	for (boolean mod: arr)
-	    		if (mod) result++;
+	    for (int i = 0; i < m; i++) 
+	    	if (mods[i] > 1) 
+	    		result += (mods[i] * (mods[i] - 1) /2);
 	    
 	    System.out.print(result);
 	}
