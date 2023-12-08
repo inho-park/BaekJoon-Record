@@ -1,11 +1,11 @@
-package _baekjoon;
+package math.sum;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
+public class First_25682 {
 	// 입력
 	//	첫째 줄에 정수 N, M, K가 주어진다. 
 	//	둘째 줄부터 N개의 줄에는 보드의 각 행의 상태가 주어진다. B는 검은색이며, W는 흰색이다.

@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 public class Second_10986 {
 	// 입력
 	//	첫째 줄에 N과 M이 주어진다. (1 ≤ N ≤ 106, 2 ≤ M ≤ 103)
-	//	둘째 줄에 N개의 수 A1, A2, ..., AN이 주어진다. (0 ≤ Ai ≤ 109)
+	//  둘째 줄에 N개의 수 A1, A2, ..., AN이 주어진다. (0 ≤ Ai ≤ 109)
 	// 출력
 	//	첫째 줄에 연속된 부분 구간의 합이 M으로 나누어 떨어지는 구간의 개수를 출력한다.
 	public static void main(String[] args) throws IOException {
