@@ -3,54 +3,72 @@ package _baekjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.StringTokenizer;
 
 public class Main {
 	// 입력
-	//	첫째 줄에 정수 N, M, K가 주어진다. 
-	//	둘째 줄부터 N개의 줄에는 보드의 각 행의 상태가 주어진다. B는 검은색이며, W는 흰색이다.
+	//	첫째 줄에 테스트케이스의 개수 T가 주어진다.
+	// 	각 테스트케이스의 첫째 줄에는 점의 개수 N(4 ≤ n ≤ 3,000)이 주어지고, 이어서 N개의 줄에는 점의 x좌표와 y좌표가 주어진다.
+	//	모든 좌표는 -10000 이상 +10000이하의 정수이다. 같은 위치의 점이 여러 번 주어지는 경우는 없다.
 	// 출력
 	//	첫째 줄에 지민이가 잘라낸 K×K 보드를 체스판으로 만들기 위해 다시 칠해야 하는 정사각형 개수의 최솟값을 출력한다.
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-	    StringTokenizer st = new StringTokenizer(br.readLine());
-	    int n = Integer.parseInt(st.nextToken()), m = Integer.parseInt(st.nextToken()), k = Integer.parseInt(st.nextToken());
-	    int board[][] = new int [n + 1][m + 1];
-	    boolean color = true;
-	    for (int i = 1; i <= n; i++) { 
-	    	char line[] = br.readLine().toCharArray();
-	    	for (int j = 1; j <= m; j++) {
-	    		if (color && line[j - 1] == 'W') board[i][j] += 1;
-	    		else if (!color && line[j - 1] =='B') board[i][j] += 1;
-	    		color = !color;
+	    StringBuilder sb = new StringBuilder();
+		int t = Integer.parseInt(br.readLine());
+	    for (int i = 0; i < t; i++) {
+	    	int n = Integer.parseInt(br.readLine()), arr[][] = new int [n][2];
+	    	Set<Location> set = new HashSet<>();
+	    	for (int j = 0; j < n; j++) {
+	    		StringTokenizer st = new StringTokenizer(br.readLine());
+	    		int x = Integer.parseInt(st.nextToken()), y = Integer.parseInt(st.nextToken());
+	    		set.add(new Location(x, y));
+	    		arr[j][0] = x; arr[j][1] = y;
 	    	}
-	    	if(m % 2 == 0) color = !color;
+	    	int ans = 0;
+	    	for (int j = 0; j < n; j++) {
+	    		int x1 = arr[j][0], y1 = arr[j][1];
+	    		for (int k = j + 1; k < n; k++) {
+	    			int x2 = arr[k][0], y2 = arr[k][1];
+	    			int dx = x1 - x2, dy = y1 - y2, temp = dx * dx + dy * dy;
+	    			if (ans >= temp) continue;
+	    			Location loc1_1 = new Location(x1 + dy, y1 - dx);
+	    			Location loc1_2 = new Location(x2 + dy, y2 - dx);
+	    			Location loc2_1 = new Location(x1 - dy, y1 + dx);
+	    			Location loc2_2 = new Location(x2 - dy, y2 + dx);
+	    			if ((set.contains(loc1_1) && set.contains(loc1_2)) 
+	    					|| (set.contains(loc2_1) && set.contains(loc2_2))) 
+	    				ans = Math.max(ans, temp);
+	    			
+	    		}
+	    	}
+	    	sb.append(ans + "\n");
 	    }
-	    
-	    for (int i = 1; i <= n; i++) {
-	    	int temp = board[i][1];
-	    	for (int j = 2; j <= m; j++) {
-	    		temp += board[i][j];
-	    		board[i][j] = temp;
-	    	}
-	    }
-	    
-	    for (int i = 1; i <= m; i++) {
-	    	int temp = board[1][i];
-	    	for (int j = 2; j <= n; j++) {
-	    		temp += board[j][i];
-	    		board[j][i] = temp;
-	    	}
-	    }
-	    
-	    int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
-	    for (int i = k; i <= n; i++)
-	    	for (int j = k; j <= m; j++) {
-	    		int temp = board[i][j] - board[i][j - k] - board[i - k][j] + board[i - k][j - k];
-	    		min = Math.min(min, temp);
-	    		max = Math.max(max, temp);
-	    	}
-	    
-	    System.out.print(Math.min(min, k * k - max));
+	    System.out.print(sb);
+	}
+}
+class Location {
+	Location(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+	int x;
+	int y;
+	
+	@Override
+	public boolean equals(Object location) {
+		if (location instanceof Location) {
+			return x == ((Location)location).x && y == ((Location)location).y;
+		} else return false;
+	}
+	
+	@Override
+	public int hashCode() {
+		if (x > 0 && y > 0) return 100000000 + x + y;
+		else if (x > 0 && y <= 0) return 200000000 + x + y;
+		else if (x <= 0 && y > 0) return 300000000 + x + y;
+		else return 400000000 + x + y;
 	}
 }
