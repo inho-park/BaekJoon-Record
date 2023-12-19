@@ -1,11 +1,11 @@
-package _baekjoon;
+package backTracking;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
+public class First_11053 {
 	// 입력
 	//	첫째 줄에 수열 A의 크기 N (1 ≤ N ≤ 1,000)이 주어진다.
 	//	둘째 줄에는 수열 A를 이루고 있는 Ai가 주어진다. (1 ≤ Ai ≤ 1,000)
@@ -25,6 +25,6 @@ public class Main {
 				if (arr[i] > arr[j]) dp[i] = Math.max(dp[i], dp[j] + 1);
 			result = Math.max(result, dp[i]);
 		}
-		System.out.print(result);
+		System.out.print(dp[n - 1]);
 	}
 }
