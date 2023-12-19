@@ -5,10 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class First_11053 {
-	// 틀린 이유
-	//  당연히 dp의 마지막 값이 정답일거라고 판단해서 틀렸다.
-	//  반례예시 => 10 20 30 40 20 30
+public class Second_11053 {
 	// 입력
 	//	첫째 줄에 수열 A의 크기 N (1 ≤ N ≤ 1,000)이 주어진다.
 	//	둘째 줄에는 수열 A를 이루고 있는 Ai가 주어진다. (1 ≤ Ai ≤ 1,000)
@@ -28,6 +25,6 @@ public class First_11053 {
 				if (arr[i] > arr[j]) dp[i] = Math.max(dp[i], dp[j] + 1);
 			result = Math.max(result, dp[i]);
 		}
-		System.out.print(dp[n - 1]);
+		System.out.print(result);
 	}
 }
