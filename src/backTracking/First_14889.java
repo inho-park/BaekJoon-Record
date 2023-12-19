@@ -1,11 +1,11 @@
-package _baekjoon;
+package backTracking;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
+public class First_14889 {
 	// 입력
 	//	첫째 줄에 N(4 ≤ N ≤ 20, N은 짝수)이 주어진다. 둘째 줄부터 N개의 줄에 S가 주어진다. 
 	//	각 줄은 N개의 수로 이루어져 있고, i번 줄의 j번째 수는 Sij 이다. 
