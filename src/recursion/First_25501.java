@@ -1,10 +1,10 @@
-package _baekjoon;
+package recursion;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main {
+public class First_25501 {
 	// 입력
 	//	첫째 줄에 테스트케이스의 개수 T가 주어진다. (1 <= T <= 1000)
 	//	둘째 줄부터 T개의 줄에 알파벳 대문자로 구성된 문자열 S가 주어진다. (1 <= |S| <= 1000)
