@@ -7,6 +7,8 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.StringTokenizer;
 
+// Activity selection problem 알고리즘 참고
+
 public class First_1931 {
 	// 입력
 	//	첫째 줄에 회의의 수 N(1 ≤ N ≤ 100,000)이 주어진다. 
