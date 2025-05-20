@@ -1,11 +1,11 @@
-package _baekjoon;
+package recursion;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
+public class First_2630 {
 	// 입력
 	//	첫째 줄에는 전체 종이의 한 변의 길이 N이 주어져 있다. 
 	// 	N은 2, 4, 8, 16, 32, 64, 128 중 하나이다. 
