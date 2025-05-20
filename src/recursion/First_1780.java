@@ -1,11 +1,11 @@
-package _baekjoon;
+package recursion;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
+public class First_1780 {
 	// 입력
 	//	첫째 줄에는 영상의 크기를 나타내는 숫자 N 이 주어진다. 
 	//	N 은 언제나 2의 제곱수로 주어지며, 1 ≤ N ≤ 64의 범위를 가진다. 
