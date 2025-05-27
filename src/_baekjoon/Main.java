@@ -20,7 +20,6 @@ public class Main {
 		int n = Integer.parseInt(st.nextToken());
 		int m = Integer.parseInt(st.nextToken());
 		int arr [] = new int [n];
-		long result = 0; 
 		long max = 0;
 		
 		st = new StringTokenizer(br.readLine(), " ");
