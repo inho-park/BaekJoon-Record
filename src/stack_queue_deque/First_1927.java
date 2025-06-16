@@ -1,11 +1,11 @@
-package _baekjoon;
+package stack_queue_deque;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.PriorityQueue;
 
-public class Main {
+public class First_1927 {
 	// 입력
 	//	첫째 줄에 연산의 개수 N(1 ≤ N ≤ 100,000)이 주어진다. 
 	//	다음 N개의 줄에는 연산에 대한 정보를 나타내는 정수 x가 주어진다. 
