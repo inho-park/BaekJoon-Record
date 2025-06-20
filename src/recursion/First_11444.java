@@ -1,10 +1,10 @@
-package _baekjoon;
+package recursion;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main {
+public class First_11444 {
 	// 입력
 	//	첫째 줄에 n이 주어진다. n은 1,000,000,000,000,000,000보다 작거나 같은 자연수이다.
 	// 출력
