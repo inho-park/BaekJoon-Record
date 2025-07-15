@@ -1,4 +1,4 @@
-package _baekjoon;
+package stack_queue_deque;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -8,7 +8,7 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
-public class Main { 
+public class First_1202 {
 	// 입력
 	//	첫째 줄에 N과 K가 주어진다. (1 ≤ N, K ≤ 300,000)
 	//	다음 N개 줄에는 각 보석의 정보 Mi와 Vi가 주어진다. (0 ≤ Mi, Vi ≤ 1,000,000)
