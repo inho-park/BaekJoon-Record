@@ -1,10 +1,10 @@
-package _baekjoon;
+package dynamic_programming;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main { 
+public class First_24416 {
 	// 입력
 	//	첫째 줄에 n(5 ≤ n ≤ 40)이 주어진다.
 	// 출력
