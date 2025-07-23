@@ -1,4 +1,4 @@
-package _baekjoon;
+package graph;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,12 +7,12 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main { 
-	// ìž…ë ¥
-	//	ì²«ì§¸ ì¤„ì— ì •ì ì˜ ê°œìˆ˜ N(1 â‰¤ N â‰¤ 1,000), ê°„ì„ ì˜ ê°œìˆ˜ M(1 â‰¤ M â‰¤ 10,000), íƒìƒ‰ì„ ì‹œìž‘í•  ì •ì ì˜ ë²ˆí˜¸ Vê°€ ì£¼ì–´ì§„ë‹¤. 
-	//	ë‹¤ìŒ Mê°œì˜ ì¤„ì—ëŠ” ê°„ì„ ì´ ì—°ê²°í•˜ëŠ” ë‘ ì •ì ì˜ ë²ˆí˜¸ê°€ ì£¼ì–´ì§„ë‹¤. ì–´ë–¤ ë‘ ì •ì  ì‚¬ì´ì— ì—¬ëŸ¬ ê°œì˜ ê°„ì„ ì´ ìžˆì„ ìˆ˜ ìžˆë‹¤. ìž…ë ¥ìœ¼ë¡œ ì£¼ì–´ì§€ëŠ” ê°„ì„ ì€ ì–‘ë°©í–¥ì´ë‹¤.
-	// ì¶œë ¥
-	//	ì²«ì§¸ ì¤„ì— DFSë¥¼ ìˆ˜í–‰í•œ ê²°ê³¼ë¥¼, ê·¸ ë‹¤ìŒ ì¤„ì—ëŠ” BFSë¥¼ ìˆ˜í–‰í•œ ê²°ê³¼ë¥¼ ì¶œë ¥í•œë‹¤. Vë¶€í„° ë°©ë¬¸ëœ ì ì„ ìˆœì„œëŒ€ë¡œ ì¶œë ¥í•˜ë©´ ëœë‹¤.
+public class Second_1260 {
+	// ÀÔ·Â
+	//	Ã¹Â° ÁÙ¿¡ Á¤Á¡ÀÇ °³¼ö N(1 ¡Â N ¡Â 1,000), °£¼±ÀÇ °³¼ö M(1 ¡Â M ¡Â 10,000), Å½»öÀ» ½ÃÀÛÇÒ Á¤Á¡ÀÇ ¹øÈ£ V°¡ ÁÖ¾îÁø´Ù. 
+	//	´ÙÀ½ M°³ÀÇ ÁÙ¿¡´Â °£¼±ÀÌ ¿¬°áÇÏ´Â µÎ Á¤Á¡ÀÇ ¹øÈ£°¡ ÁÖ¾îÁø´Ù. ¾î¶² µÎ Á¤Á¡ »çÀÌ¿¡ ¿©·¯ °³ÀÇ °£¼±ÀÌ ÀÖÀ» ¼ö ÀÖ´Ù. ÀÔ·ÂÀ¸·Î ÁÖ¾îÁö´Â °£¼±Àº ¾ç¹æÇâÀÌ´Ù.
+	// Ãâ·Â
+	//	Ã¹Â° ÁÙ¿¡ DFS¸¦ ¼öÇàÇÑ °á°ú¸¦, ±× ´ÙÀ½ ÁÙ¿¡´Â BFS¸¦ ¼öÇàÇÑ °á°ú¸¦ Ãâ·ÂÇÑ´Ù. VºÎÅÍ ¹æ¹®µÈ Á¡À» ¼ø¼­´ë·Î Ãâ·ÂÇÏ¸é µÈ´Ù.
 	static int n, cnt;
 	static boolean check [], arr [][];
 	static StringBuilder sb = new StringBuilder();
