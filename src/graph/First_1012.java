@@ -1,18 +1,18 @@
-package _baekjoon;
+package graph;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
-	// ìž…ë ¥
-	//	ìž…ë ¥ì˜ ì²« ì¤„ì—ëŠ” í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ì˜ ê°œìˆ˜ Tê°€ ì£¼ì–´ì§„ë‹¤. 
-	//	ê·¸ ë‹¤ìŒ ì¤„ë¶€í„° ê°ê°ì˜ í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ì— ëŒ€í•´ ì²«ì§¸ ì¤„ì—ëŠ” ë°°ì¶”ë¥¼ ì‹¬ì€ ë°°ì¶”ë°­ì˜ ê°€ë¡œê¸¸ì´ M(1 â‰¤ M â‰¤ 50)ê³¼ ì„¸ë¡œê¸¸ì´ N(1 â‰¤ N â‰¤ 50), 
-	//	ê·¸ë¦¬ê³  ë°°ì¶”ê°€ ì‹¬ì–´ì ¸ ìžˆëŠ” ìœ„ì¹˜ì˜ ê°œìˆ˜ K(1 â‰¤ K â‰¤ 2500)ì´ ì£¼ì–´ì§„ë‹¤. 
-	//	ê·¸ ë‹¤ìŒ Kì¤„ì—ëŠ” ë°°ì¶”ì˜ ìœ„ì¹˜ X(0 â‰¤ X â‰¤ M-1), Y(0 â‰¤ Y â‰¤ N-1)ê°€ ì£¼ì–´ì§„ë‹¤. ë‘ ë°°ì¶”ì˜ ìœ„ì¹˜ê°€ ê°™ì€ ê²½ìš°ëŠ” ì—†ë‹¤.
-	// ì¶œë ¥
-	//	ê° í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ì— ëŒ€í•´ í•„ìš”í•œ ìµœì†Œì˜ ë°°ì¶”í°ì§€ë ì´ ë§ˆë¦¬ ìˆ˜ë¥¼ ì¶œë ¥í•œë‹¤.
+public class First_1012 {
+	// ÀÔ·Â
+	//	ÀÔ·ÂÀÇ Ã¹ ÁÙ¿¡´Â Å×½ºÆ® ÄÉÀÌ½ºÀÇ °³¼ö T°¡ ÁÖ¾îÁø´Ù. 
+	//	±× ´ÙÀ½ ÁÙºÎÅÍ °¢°¢ÀÇ Å×½ºÆ® ÄÉÀÌ½º¿¡ ´ëÇØ Ã¹Â° ÁÙ¿¡´Â ¹èÃß¸¦ ½ÉÀº ¹èÃß¹çÀÇ °¡·Î±æÀÌ M(1 ¡Â M ¡Â 50)°ú ¼¼·Î±æÀÌ N(1 ¡Â N ¡Â 50), 
+	//	±×¸®°í ¹èÃß°¡ ½É¾îÁ® ÀÖ´Â À§Ä¡ÀÇ °³¼ö K(1 ¡Â K ¡Â 2500)ÀÌ ÁÖ¾îÁø´Ù. 
+	//	±× ´ÙÀ½ KÁÙ¿¡´Â ¹èÃßÀÇ À§Ä¡ X(0 ¡Â X ¡Â M-1), Y(0 ¡Â Y ¡Â N-1)°¡ ÁÖ¾îÁø´Ù. µÎ ¹èÃßÀÇ À§Ä¡°¡ °°Àº °æ¿ì´Â ¾ø´Ù.
+	// Ãâ·Â
+	//	°¢ Å×½ºÆ® ÄÉÀÌ½º¿¡ ´ëÇØ ÇÊ¿äÇÑ ÃÖ¼ÒÀÇ ¹èÃßÈòÁö··ÀÌ ¸¶¸® ¼ö¸¦ Ãâ·ÂÇÑ´Ù.
 	static int t, m, n, k, cnt = 0, total_cnt = 0;
 	static boolean check [][], arr [][];
 	static StringBuilder sb = new StringBuilder();
