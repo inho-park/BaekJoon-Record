@@ -1,4 +1,4 @@
-package _baekjoon;
+package graph;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,12 +7,12 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main {
-	// ì…ë ¥
-	//	ì²«ì§¸ ì¤„ì— ë‘ ì •ìˆ˜ N, M(2 â‰¤ N, M â‰¤ 100)ì´ ì£¼ì–´ì§„ë‹¤. 
-	//	ë‹¤ìŒ Nê°œì˜ ì¤„ì—ëŠ” Mê°œì˜ ì •ìˆ˜ë¡œ ë¯¸ë¡œê°€ ì£¼ì–´ì§„ë‹¤. ê°ê°ì˜ ìˆ˜ë“¤ì€ ë¶™ì–´ì„œ ì…ë ¥ìœ¼ë¡œ ì£¼ì–´ì§„ë‹¤.
-	// ì¶œë ¥
-	//	ì²«ì§¸ ì¤„ì— ì§€ë‚˜ì•¼ í•˜ëŠ” ìµœì†Œì˜ ì¹¸ ìˆ˜ë¥¼ ì¶œë ¥í•œë‹¤. í•­ìƒ ë„ì°©ìœ„ì¹˜ë¡œ ì´ë™í•  ìˆ˜ ìˆëŠ” ê²½ìš°ë§Œ ì…ë ¥ìœ¼ë¡œ ì£¼ì–´ì§„ë‹¤.
+public class First_2178 {
+	// ÀÔ·Â
+	//	Ã¹Â° ÁÙ¿¡ µÎ Á¤¼ö N, M(2 ¡Â N, M ¡Â 100)ÀÌ ÁÖ¾îÁø´Ù. 
+	//	´ÙÀ½ N°³ÀÇ ÁÙ¿¡´Â M°³ÀÇ Á¤¼ö·Î ¹Ì·Î°¡ ÁÖ¾îÁø´Ù. °¢°¢ÀÇ ¼öµéÀº ºÙ¾î¼­ ÀÔ·ÂÀ¸·Î ÁÖ¾îÁø´Ù.
+	// Ãâ·Â
+	//	Ã¹Â° ÁÙ¿¡ Áö³ª¾ß ÇÏ´Â ÃÖ¼ÒÀÇ Ä­ ¼ö¸¦ Ãâ·ÂÇÑ´Ù. Ç×»ó µµÂøÀ§Ä¡·Î ÀÌµ¿ÇÒ ¼ö ÀÖ´Â °æ¿ì¸¸ ÀÔ·ÂÀ¸·Î ÁÖ¾îÁø´Ù.
 	static int n, m, arr [][];
 	static boolean check [][];
     public static void main(String[] args) throws IOException {
