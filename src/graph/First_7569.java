@@ -1,4 +1,4 @@
-package _baekjoon;
+package graph;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,17 +7,17 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main {
-	// ìž…ë ¥
-	//	ì²« ì¤„ì—ëŠ” ìƒìžì˜ í¬ê¸°ë¥¼ ë‚˜íƒ€ë‚´ëŠ” ë‘ ì •ìˆ˜ M,Nê³¼ ìŒ“ì•„ì˜¬ë ¤ì§€ëŠ” ìƒìžì˜ ìˆ˜ë¥¼ ë‚˜íƒ€ë‚´ëŠ” Hê°€ ì£¼ì–´ì§„ë‹¤. 
-	//	Mì€ ìƒìžì˜ ê°€ë¡œ ì¹¸ì˜ ìˆ˜, Nì€ ìƒìžì˜ ì„¸ë¡œ ì¹¸ì˜ ìˆ˜ë¥¼ ë‚˜íƒ€ë‚¸ë‹¤. ë‹¨, 2 â‰¤ M â‰¤ 100, 2 â‰¤ N â‰¤ 100, 1 â‰¤ H â‰¤ 100 ì´ë‹¤. 
-	//	ë‘˜ì§¸ ì¤„ë¶€í„°ëŠ” ê°€ìž¥ ë°‘ì˜ ìƒìžë¶€í„° ê°€ìž¥ ìœ„ì˜ ìƒìžê¹Œì§€ì— ì €ìž¥ëœ í† ë§ˆí† ë“¤ì˜ ì •ë³´ê°€ ì£¼ì–´ì§„ë‹¤. ì¦‰, 
-	//	ë‘˜ì§¸ ì¤„ë¶€í„° Nê°œì˜ ì¤„ì—ëŠ” í•˜ë‚˜ì˜ ìƒìžì— ë‹´ê¸´ í† ë§ˆí† ì˜ ì •ë³´ê°€ ì£¼ì–´ì§„ë‹¤. ê° ì¤„ì—ëŠ” ìƒìž ê°€ë¡œì¤„ì— ë“¤ì–´ìžˆëŠ” í† ë§ˆí† ë“¤ì˜ ìƒíƒœê°€ Mê°œì˜ ì •ìˆ˜ë¡œ ì£¼ì–´ì§„ë‹¤. 
-	//	ì •ìˆ˜ 1ì€ ìµì€ í† ë§ˆí† , ì •ìˆ˜ 0 ì€ ìµì§€ ì•Šì€ í† ë§ˆí† , ì •ìˆ˜ -1ì€ í† ë§ˆí† ê°€ ë“¤ì–´ìžˆì§€ ì•Šì€ ì¹¸ì„ ë‚˜íƒ€ë‚¸ë‹¤. ì´ëŸ¬í•œ Nê°œì˜ ì¤„ì´ Hë²ˆ ë°˜ë³µí•˜ì—¬ ì£¼ì–´ì§„ë‹¤.
-	//	í† ë§ˆí† ê°€ í•˜ë‚˜ ì´ìƒ ìžˆëŠ” ê²½ìš°ë§Œ ìž…ë ¥ìœ¼ë¡œ ì£¼ì–´ì§„ë‹¤.
-	// ì¶œë ¥
-	//	ì—¬ëŸ¬ë¶„ì€ í† ë§ˆí† ê°€ ëª¨ë‘ ìµì„ ë•Œê¹Œì§€ ìµœì†Œ ë©°ì¹ ì´ ê±¸ë¦¬ëŠ”ì§€ë¥¼ ê³„ì‚°í•´ì„œ ì¶œë ¥í•´ì•¼ í•œë‹¤. 
-	//	ë§Œì•½, ì €ìž¥ë  ë•Œë¶€í„° ëª¨ë“  í† ë§ˆí† ê°€ ìµì–´ìžˆëŠ” ìƒíƒœì´ë©´ 0ì„ ì¶œë ¥í•´ì•¼ í•˜ê³ , í† ë§ˆí† ê°€ ëª¨ë‘ ìµì§€ëŠ” ëª»í•˜ëŠ” ìƒí™©ì´ë©´ -1ì„ ì¶œë ¥í•´ì•¼ í•œë‹¤.
+public class First_7569 {
+	// ÀÔ·Â
+	//	Ã¹ ÁÙ¿¡´Â »óÀÚÀÇ Å©±â¸¦ ³ªÅ¸³»´Â µÎ Á¤¼ö M,N°ú ½×¾Æ¿Ã·ÁÁö´Â »óÀÚÀÇ ¼ö¸¦ ³ªÅ¸³»´Â H°¡ ÁÖ¾îÁø´Ù. 
+	//	MÀº »óÀÚÀÇ °¡·Î Ä­ÀÇ ¼ö, NÀº »óÀÚÀÇ ¼¼·Î Ä­ÀÇ ¼ö¸¦ ³ªÅ¸³½´Ù. ´Ü, 2 ¡Â M ¡Â 100, 2 ¡Â N ¡Â 100, 1 ¡Â H ¡Â 100 ÀÌ´Ù. 
+	//	µÑÂ° ÁÙºÎÅÍ´Â °¡Àå ¹ØÀÇ »óÀÚºÎÅÍ °¡Àå À§ÀÇ »óÀÚ±îÁö¿¡ ÀúÀåµÈ Åä¸¶ÅäµéÀÇ Á¤º¸°¡ ÁÖ¾îÁø´Ù. Áï, 
+	//	µÑÂ° ÁÙºÎÅÍ N°³ÀÇ ÁÙ¿¡´Â ÇÏ³ªÀÇ »óÀÚ¿¡ ´ã±ä Åä¸¶ÅäÀÇ Á¤º¸°¡ ÁÖ¾îÁø´Ù. °¢ ÁÙ¿¡´Â »óÀÚ °¡·ÎÁÙ¿¡ µé¾îÀÖ´Â Åä¸¶ÅäµéÀÇ »óÅÂ°¡ M°³ÀÇ Á¤¼ö·Î ÁÖ¾îÁø´Ù. 
+	//	Á¤¼ö 1Àº ÀÍÀº Åä¸¶Åä, Á¤¼ö 0 Àº ÀÍÁö ¾ÊÀº Åä¸¶Åä, Á¤¼ö -1Àº Åä¸¶Åä°¡ µé¾îÀÖÁö ¾ÊÀº Ä­À» ³ªÅ¸³½´Ù. ÀÌ·¯ÇÑ N°³ÀÇ ÁÙÀÌ H¹ø ¹Ýº¹ÇÏ¿© ÁÖ¾îÁø´Ù.
+	//	Åä¸¶Åä°¡ ÇÏ³ª ÀÌ»ó ÀÖ´Â °æ¿ì¸¸ ÀÔ·ÂÀ¸·Î ÁÖ¾îÁø´Ù.
+	// Ãâ·Â
+	//	¿©·¯ºÐÀº Åä¸¶Åä°¡ ¸ðµÎ ÀÍÀ» ¶§±îÁö ÃÖ¼Ò ¸çÄ¥ÀÌ °É¸®´ÂÁö¸¦ °è»êÇØ¼­ Ãâ·ÂÇØ¾ß ÇÑ´Ù. 
+	//	¸¸¾à, ÀúÀåµÉ ¶§ºÎÅÍ ¸ðµç Åä¸¶Åä°¡ ÀÍ¾îÀÖ´Â »óÅÂÀÌ¸é 0À» Ãâ·ÂÇØ¾ß ÇÏ°í, Åä¸¶Åä°¡ ¸ðµÎ ÀÍÁö´Â ¸øÇÏ´Â »óÈ²ÀÌ¸é -1À» Ãâ·ÂÇØ¾ß ÇÑ´Ù.
 	static int m, n, h, arr [][][], cnt = 0;
 	static Queue<Queue<Integer []>> list = new LinkedList<>();
     public static void main(String[] args) throws IOException {
