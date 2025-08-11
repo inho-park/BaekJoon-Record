@@ -1,17 +1,17 @@
-package _baekjoon;
+package test;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
-	// ìž…ë ¥
-	//	ì²«ì§¸ ì¤„ì— ì¤„ìžì˜ ê¸¸ì´ê°€ ìž…ë ¥ëœë‹¤. ì¤„ìžì˜ ê¸¸ì´ëŠ” 10ãŽ ì´ìƒ, 1,000ãŽ ì´í•˜ì´ê³  ë‹¨ìœ„ë¥¼ ë‚˜íƒ€ë‚´ëŠ” ãŽì€ ìž…ë ¥ë˜ì§€ ì•ŠëŠ”ë‹¤. 
-	//	ë‘˜ì§¸ ì¤„ì—ëŠ” ë‘ ë¹¨ê°„ ì ì˜ ìœ„ì¹˜ë¥¼ ë‚˜íƒ€ë‚´ëŠ” ì •ìˆ˜ê°€ ë¹ˆì¹¸ì„ ì‚¬ì´ì— ë‘ê³  ìž…ë ¥ëœë‹¤. 
-	//	ì…‹ì§¸ ì¤„ì—ëŠ” ë‘ íŒŒëž€ ì ì˜ ìœ„ì¹˜ê°€, ë„·ì§¸ ì¤„ì—ëŠ” ë‘ ë…¸ëž€ ì ì˜ ìœ„ì¹˜ë¥¼ ë‚˜íƒ€ë‚´ëŠ” ì •ìˆ˜ê°€ ë¹ˆì¹¸ì„ ì‚¬ì´ì— ë‘ê³  ìž…ë ¥ëœë‹¤. ëª¨ë“  ì ë“¤ì˜ ìœ„ì¹˜ëŠ” ì„œë¡œ ë‹¤ë¥´ë‹¤.
-	// ì¶œë ¥
-	//	í•œ ì¤„ì— ì ‘ì€ í›„ì˜ ì¤„ìžì˜ ê¸¸ì´ë¥¼ ì†Œìˆ˜ì  ì´í•˜ í•œìžë¦¬ê¹Œì§€ ì¶œë ¥í•œë‹¤. ì†Œìˆ˜ì  ì´í•˜ í•œìžë¦¬ê°€ 0 ì´ë©´ 0 ë„ ì¶œë ¥í•œë‹¤.(ì˜ˆ 4.0)
+public class First_2597 {
+	// ÀÔ·Â
+	//	Ã¹Â° ÁÙ¿¡ ÁÙÀÚÀÇ ±æÀÌ°¡ ÀÔ·ÂµÈ´Ù. ÁÙÀÚÀÇ ±æÀÌ´Â 10§¯ ÀÌ»ó, 1,000§¯ ÀÌÇÏÀÌ°í ´ÜÀ§¸¦ ³ªÅ¸³»´Â §¯Àº ÀÔ·ÂµÇÁö ¾Ê´Â´Ù. 
+	//	µÑÂ° ÁÙ¿¡´Â µÎ »¡°£ Á¡ÀÇ À§Ä¡¸¦ ³ªÅ¸³»´Â Á¤¼ö°¡ ºóÄ­À» »çÀÌ¿¡ µÎ°í ÀÔ·ÂµÈ´Ù. 
+	//	¼ÂÂ° ÁÙ¿¡´Â µÎ ÆÄ¶õ Á¡ÀÇ À§Ä¡°¡, ³ÝÂ° ÁÙ¿¡´Â µÎ ³ë¶õ Á¡ÀÇ À§Ä¡¸¦ ³ªÅ¸³»´Â Á¤¼ö°¡ ºóÄ­À» »çÀÌ¿¡ µÎ°í ÀÔ·ÂµÈ´Ù. ¸ðµç Á¡µéÀÇ À§Ä¡´Â ¼­·Î ´Ù¸£´Ù.
+	// Ãâ·Â
+	//	ÇÑ ÁÙ¿¡ Á¢Àº ÈÄÀÇ ÁÙÀÚÀÇ ±æÀÌ¸¦ ¼Ò¼öÁ¡ ÀÌÇÏ ÇÑÀÚ¸®±îÁö Ãâ·ÂÇÑ´Ù. ¼Ò¼öÁ¡ ÀÌÇÏ ÇÑÀÚ¸®°¡ 0 ÀÌ¸é 0 µµ Ãâ·ÂÇÑ´Ù.(¿¹ 4.0)
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         float arr [][] = new float [3][2];
