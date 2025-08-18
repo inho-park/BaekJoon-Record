@@ -1,4 +1,4 @@
-package _baekjoon;
+package graph;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,12 +7,12 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main {
-	// ì…ë ¥
-	//	ì²«ì§¸ ì¤„ì— N(1 â‰¤ N â‰¤ 1,000), M(1 â‰¤ M â‰¤ 1,000)ì´ ì£¼ì–´ì§„ë‹¤. 
-	//	ë‹¤ìŒ Nê°œì˜ ì¤„ì— Mê°œì˜ ìˆ«ìë¡œ ë§µì´ ì£¼ì–´ì§„ë‹¤. (1, 1)ê³¼ (N, M)ì€ í•­ìƒ 0ì´ë¼ê³  ê°€ì •í•˜ì.
-	// ì¶œë ¥
-	//	ì²«ì§¸ ì¤„ì— ìµœë‹¨ ê±°ë¦¬ë¥¼ ì¶œë ¥í•œë‹¤. ë¶ˆê°€ëŠ¥í•  ë•ŒëŠ” -1ì„ ì¶œë ¥í•œë‹¤.
+public class First_2206 {
+	// ÀÔ·Â
+	//	Ã¹Â° ÁÙ¿¡ N(1 ¡Â N ¡Â 1,000), M(1 ¡Â M ¡Â 1,000)ÀÌ ÁÖ¾îÁø´Ù. 
+	//	´ÙÀ½ N°³ÀÇ ÁÙ¿¡ M°³ÀÇ ¼ıÀÚ·Î ¸ÊÀÌ ÁÖ¾îÁø´Ù. (1, 1)°ú (N, M)Àº Ç×»ó 0ÀÌ¶ó°í °¡Á¤ÇÏÀÚ.
+	// Ãâ·Â
+	//	Ã¹Â° ÁÙ¿¡ ÃÖ´Ü °Å¸®¸¦ Ãâ·ÂÇÑ´Ù. ºÒ°¡´ÉÇÒ ¶§´Â -1À» Ãâ·ÂÇÑ´Ù.
 	static int arr [][], n, m, result [][][]; 
 	static Queue<Integer []> queue = new LinkedList<>();
 	static int delta [][] = {{1, -1, 0, 0}, {0, 0, 1, -1}}; 
