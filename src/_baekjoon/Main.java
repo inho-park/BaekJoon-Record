@@ -4,69 +4,41 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.StringTokenizer;
 
 public class Main {
 	// 입력
-	//	입력은 여러 개의 테스트 케이스로 구성되어 있는데, 첫째 줄에 테스트 케이스의 개수 K가 주어진다. 
-	//	각 테스트 케이스의 첫째 줄에는 그래프의 정점의 개수 V와 간선의 개수 E가 빈 칸을 사이에 두고 순서대로 주어진다. 
-	//	각 정점에는 1부터 V까지 차례로 번호가 붙어 있다. 이어서 둘째 줄부터 E개의 줄에 걸쳐 간선에 대한 정보가 주어지는데, 
-	//	각 줄에 인접한 두 정점의 번호 u, v (u ≠ v)가 빈 칸을 사이에 두고 주어진다. 
+	//	첫째 줄에 로그에 기록된 출입 기록의 수 n이 주어진다. (2 ≤ n ≤ 106) 다음 n개의 줄에는 출입 기록이 순서대로 주어지며, 
+	//	각 사람의 이름이 주어지고 "enter"나 "leave"가 주어진다. "enter"인 경우는 출근, "leave"인 경우는 퇴근이다.
+	//	회사에는 동명이인이 없으며, 대소문자가 다른 경우에는 다른 이름이다. 사람들의 이름은 알파벳 대소문자로 구성된 5글자 이하의 문자열이다.
 	// 출력
-	//	K개의 줄에 걸쳐 입력으로 주어진 그래프가 이분 그래프이면 YES, 아니면 NO를 순서대로 출력한다.
-	
-	static int k, V, e, check [];
-	static List<List<Integer>> graph;
+	//	현재 회사에 있는 사람의 이름을 사전 순의 역순으로 한 줄에 한 명씩 출력한다.
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		k = Integer.parseInt(br.readLine());
-		for (int i = 0; i < k; i++) {
-			graph = new ArrayList<>();
+		
+		int n = Integer.parseInt(br.readLine());
+		Map<String, String> map = new HashMap<String, String>();
+
+		for (int i = 0; i < n; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-			V = Integer.parseInt(st.nextToken());
-			e = Integer.parseInt(st.nextToken());
-			check = new int [V + 1];
-			for (int j = 0; j <= V; j++) {
-				graph.add(new ArrayList<>());
-			}
-			for (int j = 0; j < e; j++) {
-				st = new StringTokenizer(br.readLine(), " ");
-				int from = Integer.parseInt(st.nextToken());
-				int to = Integer.parseInt(st.nextToken());
-				
-				graph.get(from).add(to);
-				graph.get(to).add(from);
-			}
-			boolean result = false;
-			for(int j = 1; j <= V; j++) {
-				if (check[j] == 0) {
-					result = bfs(j, 1);
-				}
-				if (!result) break;
-			}
-			System.out.println(result ? "YES" : "NO");
-		}
+			String name = st.nextToken();
+			String state = st.nextToken();
 
-	}
-
-	private static boolean bfs(int from, int color) {
-		Queue<Integer> queue = new LinkedList<>();
-		queue.offer(from);
-		check[from] = color;
-		while(!queue.isEmpty()) {
-			int temp = queue.poll();
-			for (int i = 0; i < graph.get(temp).size(); i++) {
-				int next = graph.get(temp).get(i);
-				if (check[temp] == check[next]) return false;
-				if (check[next] == 0) {
-					check[next] = check[temp] * -1;
-					queue.offer(next);
-				}
+			if (map.containsKey(name)) {
+				map.remove(name);
+			} else {
+				map.put(name, state);
 			}
 		}
-		return true;
+		
+		ArrayList<String> list = new ArrayList<String>(map.keySet());
+		Collections.sort(list, Collections.reverseOrder());
+		
+		for (String i : list) {
+			System.out.println(i);
+		}
 	}
 }
