@@ -1,4 +1,4 @@
-package _baekjoon;
+package binary_search;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,12 +8,12 @@ import java.util.Collections;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class Main {
-	// ì…ë ¥
-	//	ì²«ì§¸ ì¤„ì— ì§‘ì˜ ê°œìˆ˜ N (2 â‰¤ N â‰¤ 200,000)ê³¼ ê³µìœ ê¸°ì˜ ê°œìˆ˜ C (2 â‰¤ C â‰¤ N)ì´ í•˜ë‚˜ ì´ìƒì˜ ë¹ˆ ì¹¸ì„ ì‚¬ì´ì— ë‘ê³  ì£¼ì–´ì§„ë‹¤.
-	//	ë‘˜ì§¸ ì¤„ë¶€í„° Nê°œì˜ ì¤„ì—ëŠ” ì§‘ì˜ ì¢Œí‘œë¥¼ ë‚˜íƒ€ë‚´ëŠ” xi (0 â‰¤ xi â‰¤ 1,000,000,000)ê°€ í•œ ì¤„ì— í•˜ë‚˜ì”© ì£¼ì–´ì§„ë‹¤.
-	// ì¶œë ¥
-	//	ì²«ì§¸ ì¤„ì— ê°€ì¥ ì¸ì ‘í•œ ë‘ ê³µìœ ê¸° ì‚¬ì´ì˜ ìµœëŒ€ ê±°ë¦¬ë¥¼ ì¶œë ¥í•œë‹¤.
+public class First_2110 {
+	// ÀÔ·Â
+	//	Ã¹Â° ÁÙ¿¡ ÁıÀÇ °³¼ö N (2 ¡Â N ¡Â 200,000)°ú °øÀ¯±âÀÇ °³¼ö C (2 ¡Â C ¡Â N)ÀÌ ÇÏ³ª ÀÌ»óÀÇ ºó Ä­À» »çÀÌ¿¡ µÎ°í ÁÖ¾îÁø´Ù.
+	//	µÑÂ° ÁÙºÎÅÍ N°³ÀÇ ÁÙ¿¡´Â ÁıÀÇ ÁÂÇ¥¸¦ ³ªÅ¸³»´Â xi (0 ¡Â xi ¡Â 1,000,000,000)°¡ ÇÑ ÁÙ¿¡ ÇÏ³ª¾¿ ÁÖ¾îÁø´Ù.
+	// Ãâ·Â
+	//	Ã¹Â° ÁÙ¿¡ °¡Àå ÀÎÁ¢ÇÑ µÎ °øÀ¯±â »çÀÌÀÇ ÃÖ´ë °Å¸®¸¦ Ãâ·ÂÇÑ´Ù.
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
