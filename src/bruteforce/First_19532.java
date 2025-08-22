@@ -1,16 +1,16 @@
-package _baekjoon;
+package bruteforce;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
-	// ì…ë ¥
-	//	ì •ìˆ˜ a, b, c, d, e, fê°€ ê³µë°±ìœ¼ë¡œ êµ¬ë¶„ë˜ì–´ ì°¨ë¡€ëŒ€ë¡œ ì£¼ì–´ì§„ë‹¤. (-999 <= a,b,c,d,e,f <= 999)
-	//	ë¬¸ì œì—ì„œ ì–¸ê¸‰í•œ ë°©ì •ì‹ì„ ë§Œì¡±í•˜ëŠ” (x,y)ê°€ ìœ ì¼í•˜ê²Œ ì¡´ì¬í•˜ê³ , ì´ ë•Œ xì™€ yê°€ ê°ê° -999 ì´ìƒ 999 ì´í•˜ì˜ ì •ìˆ˜ì¸ ê²½ìš°ë§Œ ì…ë ¥ìœ¼ë¡œ ì£¼ì–´ì§ì´ ë³´ì¥ëœë‹¤.
-	// ì¶œë ¥
-	//	ë¬¸ì œì˜ ë‹µì¸ xì™€ yë¥¼ ê³µë°±ìœ¼ë¡œ êµ¬ë¶„í•´ ì¶œë ¥í•œë‹¤.
+public class First_19532 {
+	// ÀÔ·Â
+	//	Á¤¼ö a, b, c, d, e, f°¡ °ø¹éÀ¸·Î ±¸ºĞµÇ¾î Â÷·Ê´ë·Î ÁÖ¾îÁø´Ù. (-999 <= a,b,c,d,e,f <= 999)
+	//	¹®Á¦¿¡¼­ ¾ğ±ŞÇÑ ¹æÁ¤½ÄÀ» ¸¸Á·ÇÏ´Â (x,y)°¡ À¯ÀÏÇÏ°Ô Á¸ÀçÇÏ°í, ÀÌ ¶§ x¿Í y°¡ °¢°¢ -999 ÀÌ»ó 999 ÀÌÇÏÀÇ Á¤¼öÀÎ °æ¿ì¸¸ ÀÔ·ÂÀ¸·Î ÁÖ¾îÁüÀÌ º¸ÀåµÈ´Ù.
+	// Ãâ·Â
+	//	¹®Á¦ÀÇ ´äÀÎ x¿Í y¸¦ °ø¹éÀ¸·Î ±¸ºĞÇØ Ãâ·ÂÇÑ´Ù.
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
