@@ -1,17 +1,17 @@
-package _baekjoon;
+package test;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
-	// ì…ë ¥
-	//	ì²«ì§¸ ì¤„ì— í•¨ìˆ˜ f(n)ì„ ë‚˜íƒ€ë‚´ëŠ” ì •ìˆ˜ a1, a0ê°€ ì£¼ì–´ì§„ë‹¤. (0 â‰¤ |ai| â‰¤ 100)
-	//	ë‹¤ìŒ ì¤„ì— ì–‘ì˜ ì •ìˆ˜ cê°€ ì£¼ì–´ì§„ë‹¤. (1 â‰¤ c â‰¤ 100)
-	//	ë‹¤ìŒ ì¤„ì— ì–‘ì˜ ì •ìˆ˜ n0ê°€ ì£¼ì–´ì§„ë‹¤. (1 â‰¤ n0 â‰¤ 100)
-	// ì¶œë ¥
-	//	f(n), c, n0ê°€ O(n) ì •ì˜ë¥¼ ë§Œì¡±í•˜ë©´ 1, ì•„ë‹ˆë©´ 0ì„ ì¶œë ¥í•œë‹¤.
+public class First_24313 {
+	// ÀÔ·Â
+	//	Ã¹Â° ÁÙ¿¡ ÇÔ¼ö f(n)À» ³ªÅ¸³»´Â Á¤¼ö a1, a0°¡ ÁÖ¾îÁø´Ù. (0 ¡Â |ai| ¡Â 100)
+	//	´ÙÀ½ ÁÙ¿¡ ¾çÀÇ Á¤¼ö c°¡ ÁÖ¾îÁø´Ù. (1 ¡Â c ¡Â 100)
+	//	´ÙÀ½ ÁÙ¿¡ ¾çÀÇ Á¤¼ö n0°¡ ÁÖ¾îÁø´Ù. (1 ¡Â n0 ¡Â 100)
+	// Ãâ·Â
+	//	f(n), c, n0°¡ O(n) Á¤ÀÇ¸¦ ¸¸Á·ÇÏ¸é 1, ¾Æ´Ï¸é 0À» Ãâ·ÂÇÑ´Ù.
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
