@@ -1,16 +1,16 @@
-package _baekjoon;
+package test;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
-	// ì…ë ¥
-	//	ì²«ì§¸ ì¤„ì—ëŠ” ì ì˜ ê°œìˆ˜ N (1 â‰¤ N â‰¤ 100,000) ì´ ì£¼ì–´ì§„ë‹¤. 
-	//	ì´ì–´ì§€ëŠ” N ì¤„ì—ëŠ” ê° ì ì˜ ì¢Œí‘œê°€ ë‘ ê°œì˜ ì •ìˆ˜ë¡œ í•œ ì¤„ì— í•˜ë‚˜ì”© ì£¼ì–´ì§„ë‹¤. ê°ê°ì˜ ì¢Œí‘œëŠ” -10,000 ì´ìƒ 10,000 ì´í•˜ì˜ ì •ìˆ˜ì´ë‹¤. 
-	// ì¶œë ¥
-	//	ì²«ì§¸ ì¤„ì— N ê°œì˜ ì ì„ ë‘˜ëŸ¬ì‹¸ëŠ” ìµœì†Œ í¬ê¸°ì˜ ì§ì‚¬ê°í˜•ì˜ ë„“ì´ë¥¼ ì¶œë ¥í•˜ì‹œì˜¤. 
+public class First_9063 {
+	// ÀÔ·Â
+	//	Ã¹Â° ÁÙ¿¡´Â Á¡ÀÇ °³¼ö N (1 ¡Â N ¡Â 100,000) ÀÌ ÁÖ¾îÁø´Ù. 
+	//	ÀÌ¾îÁö´Â N ÁÙ¿¡´Â °¢ Á¡ÀÇ ÁÂÇ¥°¡ µÎ °³ÀÇ Á¤¼ö·Î ÇÑ ÁÙ¿¡ ÇÏ³ª¾¿ ÁÖ¾îÁø´Ù. °¢°¢ÀÇ ÁÂÇ¥´Â -10,000 ÀÌ»ó 10,000 ÀÌÇÏÀÇ Á¤¼öÀÌ´Ù. 
+	// Ãâ·Â
+	//	Ã¹Â° ÁÙ¿¡ N °³ÀÇ Á¡À» µÑ·¯½Î´Â ÃÖ¼Ò Å©±âÀÇ Á÷»ç°¢ÇüÀÇ ³ĞÀÌ¸¦ Ãâ·ÂÇÏ½Ã¿À. 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int n = Integer.parseInt(br.readLine());
