@@ -1,4 +1,4 @@
-package _baekjoon;
+package test;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,11 +6,11 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Main {
-	// ì…ë ¥
-	//	ì²«ì§¸ ì¤„ì— a, b, c (1 â‰¤ a, b, c â‰¤ 100)ê°€ ì£¼ì–´ì§„ë‹¤.
-	// ì¶œë ¥
-	//	ì²«ì§¸ ì¤„ì— ë§Œë“¤ ìˆ˜ ìˆëŠ” ê°€ì¥ í° ì‚¼ê°í˜•ì˜ ë‘˜ë ˆë¥¼ ì¶œë ¥í•œë‹¤.
+public class First_14215 {
+	// ÀÔ·Â
+	//	Ã¹Â° ÁÙ¿¡ a, b, c (1 ¡Â a, b, c ¡Â 100)°¡ ÁÖ¾îÁø´Ù.
+	// Ãâ·Â
+	//	Ã¹Â° ÁÙ¿¡ ¸¸µé ¼ö ÀÖ´Â °¡Àå Å« »ï°¢ÇüÀÇ µÑ·¹¸¦ Ãâ·ÂÇÑ´Ù.
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
