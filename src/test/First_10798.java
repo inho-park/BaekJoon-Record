@@ -1,16 +1,16 @@
-package _baekjoon;
+package test;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main {
-	// ìž…ë ¥
-	//	ì´ ë‹¤ì„¯ì¤„ì˜ ìž…ë ¥ì´ ì£¼ì–´ì§„ë‹¤. ê° ì¤„ì—ëŠ” ìµœì†Œ 1ê°œ, ìµœëŒ€ 15ê°œì˜ ê¸€ìžë“¤ì´ ë¹ˆì¹¸ ì—†ì´ ì—°ì†ìœ¼ë¡œ ì£¼ì–´ì§„ë‹¤. 
-	//	ì£¼ì–´ì§€ëŠ” ê¸€ìžëŠ” ì˜ì–´ ëŒ€ë¬¸ìž â€˜Aâ€™ë¶€í„° â€˜Zâ€™, ì˜ì–´ ì†Œë¬¸ìž â€˜aâ€™ë¶€í„° â€˜zâ€™, ìˆ«ìž â€˜0â€™ë¶€í„° â€˜9â€™ ì¤‘ í•˜ë‚˜ì´ë‹¤. 
-	//	ê° ì¤„ì˜ ì‹œìž‘ê³¼ ë§ˆì§€ë§‰ì— ë¹ˆì¹¸ì€ ì—†ë‹¤.
-	// ì¶œë ¥
-	//	ì˜ì„ì´ê°€ ì„¸ë¡œë¡œ ì½ì€ ìˆœì„œëŒ€ë¡œ ê¸€ìžë“¤ì„ ì¶œë ¥í•œë‹¤. ì´ë•Œ, ê¸€ìžë“¤ì„ ê³µë°± ì—†ì´ ì—°ì†í•´ì„œ ì¶œë ¥í•œë‹¤. 
+public class First_10798 {
+	// ÀÔ·Â
+	//	ÃÑ ´Ù¼¸ÁÙÀÇ ÀÔ·ÂÀÌ ÁÖ¾îÁø´Ù. °¢ ÁÙ¿¡´Â ÃÖ¼Ò 1°³, ÃÖ´ë 15°³ÀÇ ±ÛÀÚµéÀÌ ºóÄ­ ¾øÀÌ ¿¬¼ÓÀ¸·Î ÁÖ¾îÁø´Ù. 
+	//	ÁÖ¾îÁö´Â ±ÛÀÚ´Â ¿µ¾î ´ë¹®ÀÚ ¡®A¡¯ºÎÅÍ ¡®Z¡¯, ¿µ¾î ¼Ò¹®ÀÚ ¡®a¡¯ºÎÅÍ ¡®z¡¯, ¼ýÀÚ ¡®0¡¯ºÎÅÍ ¡®9¡¯ Áß ÇÏ³ªÀÌ´Ù. 
+	//	°¢ ÁÙÀÇ ½ÃÀÛ°ú ¸¶Áö¸·¿¡ ºóÄ­Àº ¾ø´Ù.
+	// Ãâ·Â
+	//	¿µ¼®ÀÌ°¡ ¼¼·Î·Î ÀÐÀº ¼ø¼­´ë·Î ±ÛÀÚµéÀ» Ãâ·ÂÇÑ´Ù. ÀÌ¶§, ±ÛÀÚµéÀ» °ø¹é ¾øÀÌ ¿¬¼ÓÇØ¼­ Ãâ·ÂÇÑ´Ù. 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		char [][] arr = new char [5][15];
