@@ -1,4 +1,4 @@
-package _baekjoon;
+package test;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,12 +8,12 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main {
-	// ì…ë ¥
-	//	ì²«ì§¸ ì¤„ë¶€í„° ì•„í™‰ ë²ˆì§¸ ì¤„ê¹Œì§€ í•œ ì¤„ì— ì•„í™‰ ê°œì”© ìˆ˜ê°€ ì£¼ì–´ì§„ë‹¤. ì£¼ì–´ì§€ëŠ” ìˆ˜ëŠ” 100ë³´ë‹¤ ì‘ì€ ìì—°ìˆ˜ ë˜ëŠ” 0ì´ë‹¤.
-	// ì¶œë ¥
-	//	ì²«ì§¸ ì¤„ì— ìµœëŒ“ê°’ì„ ì¶œë ¥í•˜ê³ , ë‘˜ì§¸ ì¤„ì— ìµœëŒ“ê°’ì´ ìœ„ì¹˜í•œ í–‰ ë²ˆí˜¸ì™€ ì—´ ë²ˆí˜¸ë¥¼ ë¹ˆì¹¸ì„ ì‚¬ì´ì— ë‘ê³  ì°¨ë¡€ë¡œ ì¶œë ¥í•œë‹¤. 
-	//	ìµœëŒ“ê°’ì´ ë‘ ê°œ ì´ìƒì¸ ê²½ìš° ê·¸ ì¤‘ í•œ ê³³ì˜ ìœ„ì¹˜ë¥¼ ì¶œë ¥í•œë‹¤.
+public class First_2566 {
+	// ÀÔ·Â
+	//	Ã¹Â° ÁÙºÎÅÍ ¾ÆÈ© ¹øÂ° ÁÙ±îÁö ÇÑ ÁÙ¿¡ ¾ÆÈ© °³¾¿ ¼ö°¡ ÁÖ¾îÁø´Ù. ÁÖ¾îÁö´Â ¼ö´Â 100º¸´Ù ÀÛÀº ÀÚ¿¬¼ö ¶Ç´Â 0ÀÌ´Ù.
+	// Ãâ·Â
+	//	Ã¹Â° ÁÙ¿¡ ÃÖ´ñ°ªÀ» Ãâ·ÂÇÏ°í, µÑÂ° ÁÙ¿¡ ÃÖ´ñ°ªÀÌ À§Ä¡ÇÑ Çà ¹øÈ£¿Í ¿­ ¹øÈ£¸¦ ºóÄ­À» »çÀÌ¿¡ µÎ°í Â÷·Ê·Î Ãâ·ÂÇÑ´Ù. 
+	//	ÃÖ´ñ°ªÀÌ µÎ °³ ÀÌ»óÀÎ °æ¿ì ±× Áß ÇÑ °÷ÀÇ À§Ä¡¸¦ Ãâ·ÂÇÑ´Ù.
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		Comparator<Integer []> comparator = new Comparator<Integer []>() {
