@@ -1,15 +1,15 @@
-package _baekjoon;
+package binary_search;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main {
-	// ì…ë ¥
-	//	ì²«ì§¸ ì¤„ì— ë°°ì—´ì˜ í¬ê¸° Nì´ ì£¼ì–´ì§„ë‹¤. Nì€ 105ë³´ë‹¤ ì‘ê±°ë‚˜ ê°™ì€ ìì—°ìˆ˜ì´ë‹¤. 
-	//	ë‘˜ì§¸ ì¤„ì— kê°€ ì£¼ì–´ì§„ë‹¤. këŠ” min(109, N2)ë³´ë‹¤ ì‘ê±°ë‚˜ ê°™ì€ ìì—°ìˆ˜ì´ë‹¤.
-	// ì¶œë ¥
-	//	B[k]ë¥¼ ì¶œë ¥í•œë‹¤.
+public class Second_1300 {
+	// ÀÔ·Â
+	//	Ã¹Â° ÁÙ¿¡ ¹è¿­ÀÇ Å©±â NÀÌ ÁÖ¾îÁø´Ù. NÀº 105º¸´Ù ÀÛ°Å³ª °°Àº ÀÚ¿¬¼öÀÌ´Ù. 
+	//	µÑÂ° ÁÙ¿¡ k°¡ ÁÖ¾îÁø´Ù. k´Â min(109, N2)º¸´Ù ÀÛ°Å³ª °°Àº ÀÚ¿¬¼öÀÌ´Ù.
+	// Ãâ·Â
+	//	B[k]¸¦ Ãâ·ÂÇÑ´Ù.
 	public static void main(String[] args) throws IOException {
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
