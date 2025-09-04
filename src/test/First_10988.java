@@ -1,14 +1,14 @@
-package _baekjoon;
+package test;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main {
-	// ì…ë ¥
-	//	ì²«ì§¸ ì¤„ì— ë‹¨ì–´ê°€ ì£¼ì–´ì§„ë‹¤. ë‹¨ì–´ì˜ ê¸¸ì´ëŠ” 1ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ê³ , 100ë³´ë‹¤ ì‘ê±°ë‚˜ ê°™ìœ¼ë©°, ì•ŒíŒŒë²³ ì†Œë¬¸ìë¡œë§Œ ì´ë£¨ì–´ì ¸ ìˆë‹¤.
-	// ì¶œë ¥
-	//	ì²«ì§¸ ì¤„ì— íŒ°ë¦°ë“œë¡¬ì´ë©´ 1, ì•„ë‹ˆë©´ 0ì„ ì¶œë ¥í•œë‹¤.
+public class First_10988 {
+	// ÀÔ·Â
+	//	Ã¹Â° ÁÙ¿¡ ´Ü¾î°¡ ÁÖ¾îÁø´Ù. ´Ü¾îÀÇ ±æÀÌ´Â 1º¸´Ù Å©°Å³ª °°°í, 100º¸´Ù ÀÛ°Å³ª °°À¸¸ç, ¾ËÆÄºª ¼Ò¹®ÀÚ·Î¸¸ ÀÌ·ç¾îÁ® ÀÖ´Ù.
+	// Ãâ·Â
+	//	Ã¹Â° ÁÙ¿¡ ÆÓ¸°µå·ÒÀÌ¸é 1, ¾Æ´Ï¸é 0À» Ãâ·ÂÇÑ´Ù.
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		char [] arr = br.readLine().toCharArray();
