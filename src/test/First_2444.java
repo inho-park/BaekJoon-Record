@@ -1,14 +1,14 @@
-package _baekjoon;
+package test;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main {
-	// ì…ë ¥
-	//	ì²«ì§¸ ì¤„ì— N(1 â‰¤ N â‰¤ 100)ì´ ì£¼ì–´ì§„ë‹¤.
-	// ì¶œë ¥
-	//	ì²«ì§¸ ì¤„ë¶€í„° 2Ã—N-1ë²ˆì§¸ ì¤„ê¹Œì§€ ì°¨ë¡€ëŒ€ë¡œ ë³„ì„ ì¶œë ¥í•œë‹¤.
+public class First_2444 {
+	// ÀÔ·Â
+	//	Ã¹Â° ÁÙ¿¡ N(1 ¡Â N ¡Â 100)ÀÌ ÁÖ¾îÁø´Ù.
+	// Ãâ·Â
+	//	Ã¹Â° ÁÙºÎÅÍ 2¡¿N-1¹øÂ° ÁÙ±îÁö Â÷·Ê´ë·Î º°À» Ãâ·ÂÇÑ´Ù.
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int n = Integer.parseInt(br.readLine());
