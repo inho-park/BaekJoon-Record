@@ -1,4 +1,4 @@
-package _baekjoon;
+package stack_queue_deque;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Deque;
 import java.util.LinkedList;
 
-public class Main {
+public class First_30618 {
 	// 입력
 	//	첫째 줄에 구하고자 하는 순열의 길이 N이 주어진다. (1 <= N <= 200,000) 
 	// 출력
