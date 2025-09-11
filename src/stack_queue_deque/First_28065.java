@@ -1,10 +1,10 @@
-package _baekjoon;
+package stack_queue_deque;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main {
+public class First_28065 {
 	// 입력
 	//	첫째 줄에 구하고자 하는 SW 수열의 길이 N이 주어진다. (3 <= N <=> 5000) 
 	// 출력
