@@ -1,4 +1,4 @@
-package _baekjoon;
+package two_pointer;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,12 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class Main {
-	// ì…ë ¥
-	//	ì²«ì§¸ ì¤„ì— ìˆ˜ì—´ì˜ í¬ê¸° nì´ ì£¼ì–´ì§„ë‹¤. ë‹¤ìŒ ì¤„ì—ëŠ” ìˆ˜ì—´ì— í¬í•¨ë˜ëŠ” ìˆ˜ê°€ ì£¼ì–´ì§„ë‹¤. ì…‹ì§¸ ì¤„ì—ëŠ” xê°€ ì£¼ì–´ì§„ë‹¤. 
-	//	(1 â‰¤ n â‰¤ 100000, 1 â‰¤ x â‰¤ 2000000)
-	// ì¶œë ¥
-	//	ë¬¸ì œì˜ ì¡°ê±´ì„ ë§Œì¡±í•˜ëŠ” ìŒì˜ ê°œìˆ˜ë¥¼ ì¶œë ¥í•œë‹¤.
+public class First_3273 {
+	// ÀÔ·Â
+	//	Ã¹Â° ÁÙ¿¡ ¼ö¿­ÀÇ Å©±â nÀÌ ÁÖ¾îÁø´Ù. ´ÙÀ½ ÁÙ¿¡´Â ¼ö¿­¿¡ Æ÷ÇÔµÇ´Â ¼ö°¡ ÁÖ¾îÁø´Ù. ¼ÂÂ° ÁÙ¿¡´Â x°¡ ÁÖ¾îÁø´Ù. 
+	//	(1 ¡Â n ¡Â 100000, 1 ¡Â x ¡Â 2000000)
+	// Ãâ·Â
+	//	¹®Á¦ÀÇ Á¶°ÇÀ» ¸¸Á·ÇÏ´Â ½ÖÀÇ °³¼ö¸¦ Ãâ·ÂÇÑ´Ù.
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int n = Integer.parseInt(br.readLine());
