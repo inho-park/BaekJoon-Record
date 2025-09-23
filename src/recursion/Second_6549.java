@@ -1,19 +1,19 @@
-package _baekjoon;
+package recursion;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
-	// ìž…ë ¥
-	//	ìž…ë ¥ì€ í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ ì—¬ëŸ¬ ê°œë¡œ ì´ë£¨ì–´ì ¸ ìžˆë‹¤. ê° í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ëŠ” í•œ ì¤„ë¡œ ì´ë£¨ì–´ì ¸ ìžˆê³ , 
-	//	ì§ì‚¬ê°í˜•ì˜ ìˆ˜ nì´ ê°€ìž¥ ì²˜ìŒìœ¼ë¡œ ì£¼ì–´ì§„ë‹¤. (1 â‰¤ n â‰¤ 100,000) 
-	//	ê·¸ ë‹¤ìŒ nê°œì˜ ì •ìˆ˜ h1, ..., hn (0 â‰¤ hi â‰¤ 1,000,000,000)ê°€ ì£¼ì–´ì§„ë‹¤. 
-	//	ì´ ìˆ«ìžë“¤ì€ ížˆìŠ¤í† ê·¸ëž¨ì— ìžˆëŠ” ì§ì‚¬ê°í˜•ì˜ ë†’ì´ì´ë©°, ì™¼ìª½ë¶€í„° ì˜¤ë¥¸ìª½ê¹Œì§€ ìˆœì„œëŒ€ë¡œ ì£¼ì–´ì§„ë‹¤. 
-	//	ëª¨ë“  ì§ì‚¬ê°í˜•ì˜ ë„ˆë¹„ëŠ” 1ì´ê³ , ìž…ë ¥ì˜ ë§ˆì§€ë§‰ ì¤„ì—ëŠ” 0ì´ í•˜ë‚˜ ì£¼ì–´ì§„ë‹¤.
-	// ì¶œë ¥
-	//	ê° í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ì— ëŒ€í•´ì„œ, ížˆìŠ¤í† ê·¸ëž¨ì—ì„œ ê°€ìž¥ ë„“ì´ê°€ í° ì§ì‚¬ê°í˜•ì˜ ë„“ì´ë¥¼ ì¶œë ¥í•œë‹¤.
+public class Second_6549 {
+	// ÀÔ·Â
+	//	ÀÔ·ÂÀº Å×½ºÆ® ÄÉÀÌ½º ¿©·¯ °³·Î ÀÌ·ç¾îÁ® ÀÖ´Ù. °¢ Å×½ºÆ® ÄÉÀÌ½º´Â ÇÑ ÁÙ·Î ÀÌ·ç¾îÁ® ÀÖ°í, 
+	//	Á÷»ç°¢ÇüÀÇ ¼ö nÀÌ °¡Àå Ã³À½À¸·Î ÁÖ¾îÁø´Ù. (1 ¡Â n ¡Â 100,000) 
+	//	±× ´ÙÀ½ n°³ÀÇ Á¤¼ö h1, ..., hn (0 ¡Â hi ¡Â 1,000,000,000)°¡ ÁÖ¾îÁø´Ù. 
+	//	ÀÌ ¼ýÀÚµéÀº È÷½ºÅä±×·¥¿¡ ÀÖ´Â Á÷»ç°¢ÇüÀÇ ³ôÀÌÀÌ¸ç, ¿ÞÂÊºÎÅÍ ¿À¸¥ÂÊ±îÁö ¼ø¼­´ë·Î ÁÖ¾îÁø´Ù. 
+	//	¸ðµç Á÷»ç°¢ÇüÀÇ ³Êºñ´Â 1ÀÌ°í, ÀÔ·ÂÀÇ ¸¶Áö¸· ÁÙ¿¡´Â 0ÀÌ ÇÏ³ª ÁÖ¾îÁø´Ù.
+	// Ãâ·Â
+	//	°¢ Å×½ºÆ® ÄÉÀÌ½º¿¡ ´ëÇØ¼­, È÷½ºÅä±×·¥¿¡¼­ °¡Àå ³ÐÀÌ°¡ Å« Á÷»ç°¢ÇüÀÇ ³ÐÀÌ¸¦ Ãâ·ÂÇÑ´Ù.
 	static int [] arr;
 	static StringBuilder sb = new StringBuilder();
 	public static void main(String[] args) throws IOException {
