@@ -7,76 +7,36 @@ import java.util.StringTokenizer;
 
 public class Main {
 	// 입력
-	//	입력은 테스트 케이스 여러 개로 이루어져 있다. 각 테스트 케이스는 한 줄로 이루어져 있고, 
-	//	직사각형의 수 n이 가장 처음으로 주어진다. (1 ≤ n ≤ 100,000) 
-	//	그 다음 n개의 정수 h1, ..., hn (0 ≤ hi ≤ 1,000,000,000)가 주어진다. 
-	//	이 숫자들은 히스토그램에 있는 직사각형의 높이이며, 왼쪽부터 오른쪽까지 순서대로 주어진다. 
-	//	모든 직사각형의 너비는 1이고, 입력의 마지막 줄에는 0이 하나 주어진다.
+	//	첫째 줄에 수열 A의 크기 N (1 ≤ N ≤ 1,000,000)이 주어진다.
+	//	둘째 줄에는 수열 A를 이루고 있는 Ai가 주어진다. (1 ≤ Ai ≤ 1,000,000)
 	// 출력
-	//	각 테스트 케이스에 대해서, 히스토그램에서 가장 넓이가 큰 직사각형의 넓이를 출력한다.
-	static int [] arr;
+	//	첫째 줄에 수열 A의 가장 긴 증가하는 부분 수열의 길이를 출력한다.
 	static StringBuilder sb = new StringBuilder();
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		while(true) {
-			StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-			int n = Integer.parseInt(st.nextToken());
-			if (n == 0) break;
-			arr = new int [n];
-			
-			for (int i = 0; i < n; i++) {
-				arr[i] = Integer.parseInt(st.nextToken());
-			}
-			sb.append(recursion(0, n - 1)).append("\n");
+		int n = Integer.parseInt(br.readLine());
+		int arr [] = new int [n], lis [] = new int [n];
+		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+		for (int i = 0; i < n; i++) {
+			arr[i] = Integer.parseInt(st.nextToken());
 		}
-		
-		System.out.print(sb);
-	}
-	
-	static long recursion(int low, int high) {
-		if (low == high) return arr[low];
-		
-		int mid = (low + high) / 2;
-		long left = recursion(low, mid);
-		long right = recursion(mid + 1, high);
-		
-		long result = right > left ? right : left;
-		long extent = getArea(low, high, mid);
-		return result > extent ? result : extent;
-	}
-	
-	static long getArea(int low, int high, int mid) {
-		int left = mid;
-		int right = mid;
-		long height = arr[mid];
-		
-		long result = height;
-		
-		while(low < left && right < high) {
-			if (arr[left - 1] >= arr[right + 1]) {
-				left--;
-				height = height > arr[left] ? arr[left] : height;
+		lis[0] = arr[0];
+		int result = 1;
+		for (int i = 1; i < n; i++) {
+			int k = arr[i];
+			if (lis[result - 1] < k) {
+				result++;
+				lis[result - 1] = k;
 			} else {
-				right++;
-				height = height > arr[right] ? arr[right] : height;
+				int low = 0, high = result;
+				while(low < high) {
+					int mid = (low + high) / 2;
+					if (lis[mid] < k) low = mid + 1;
+					else high = mid;
+				}
+				lis[low] = k;
 			}
-			long temp = (right - left + 1) * height;
-			result = result > temp ? result : temp;
 		}
-		
-		while(low < left) {
-			left--;
-			height = height > arr[left] ? arr[left] : height;
-			long temp = (right - left + 1) * height;
-			result = result > temp ? result : temp;
-		}
-		while(right < high) {
-			right++;
-			height = height > arr[right] ? arr[right] : height;
-			long temp = (right - left + 1) * height;
-			result = result > temp ? result : temp;
-		}
-		
-		return result;
+		System.out.print(result);
 	}
 }
