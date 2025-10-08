@@ -1,10 +1,10 @@
-package _baekjoon;
+package test;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main {
+public class First_25314 {
 	// 입력
 	//	첫 번째 줄에는 문제의 정수 N이 주어진다. (4 <= N <= 1,000; N은 4의 배수) 
 	// 출력
